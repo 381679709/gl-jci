@@ -1,14 +1,12 @@
 // ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        http://oa.gl-jci.com/application/xmgl01/application-list/testfj?parentId=2c2c808488425f580188426814ed0000&code=testfj&openMode=&pcUrl=&queryCode=&return=%2Fportal-page%2FdefaultPortalDashboard
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=gl-jci.com
-// @grant        none
+// @description  国联江森附件预览
+// @match        *://oa.gl-jci.com/*
+// @name         国联江森附件预览按钮
+// @license      MIT
+// @namespace    https://greasyfork.org/users/1216559
+// @require      https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js
 // ==/UserScript==
-
 (function() {
     'use strict';
 window.addEventListener("message", (event) => {
