@@ -11,19 +11,16 @@
     'use strict';
 
              $(function(){
-                 //console.log("Received message:", event.data.obj);
-                    let allObj = window.h3form;
-                    for (let key in allObj) {
-                        if(key.indexOf("Attachment")>-1){
-                            let atts = allObj[key];
-                            console.log(atts);
-                            for(let i=0;i<atts.length;i++){
-                                console.log("下载按钮"+atts[i],$("#"+key).find(".file-item").eq(i).find(".download-icon"));
-                                $("#"+key).find(".file-item").eq(i).find(".download-icon").append($("<a href=\"https://view.xdocin.com/view?src="
-                                +atts[i].url+"\">预览</a>"));
-                            }
-                        }
-                    }
+                 for(let i=0;i<$("[id*=Attachment]").length;i++){
+    
+    let atti = h3form.value[$("[id*=Attachment]").eq(i).attr("id")];
+    let key = $("[id*=Attachment]").eq(i).attr("id");
+    for(let j=0;j<atti.length;j++){
+        $("#"+key).find(".file-item").eq(j).find(".download-icon").append($("<a href=\"https://view.xdocin.com/view?src="
+                                +atti[j].url+"\">预览</a>"));
+    }
+    
+}
              });
                     
                 
