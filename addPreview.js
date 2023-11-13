@@ -9,10 +9,10 @@
 // ==/UserScript==
 (function() {
     'use strict';
-window.addEventListener("message", (event) => {
-                if(event.data.src&&event.data.src=="attPreview"){
-                    //console.log("Received message:", event.data.obj);
-                    let allObj = event.data.obj
+
+             $(function(){
+                 //console.log("Received message:", event.data.obj);
+                    let allObj = window.h3form;
                     for (let key in allObj) {
                         if(key.indexOf("Attachment")>-1){
                             let atts = allObj[key];
@@ -24,7 +24,8 @@ window.addEventListener("message", (event) => {
                             }
                         }
                     }
-                }
-            });
-    // Your code here...
+             });
+                    
+                
+  
 })();
